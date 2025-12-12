@@ -7,6 +7,9 @@ This document outlines the standard operating procedure for an AI agent (Antigra
 Before checking for UI/UX compliance, you must identify the pages to visit.
 
 1.  **Laravel Route Identification**:
+    *   **Context**: The website can be accessed using the url {website}.test no need to run the artisan php server.
+    *   **Filter**: Don't run the checks on dashboard or backend filament routes or tenant routes. Only frontend public routes please.
+    *   **Accessing routes behind auth layer**: use email : test@example.com and password : password to login and access routes behind auth layer.
     *   **File Inspection**: Read the route definition files in the `routes/` directory. specifically look for `routes/web.php` or custom files like `routes/broccoli.php`.
     *   **Artisan Command**: Run the following command to get a comprehensive list of registered routes:
         ```bash
